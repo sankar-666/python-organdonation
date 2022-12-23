@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Organization Register</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="static/assets/orgreg/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="static/assets/orgreg/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="static/assets/orgreg/images/registration-form-6.jpg" alt="">
+				</div>
+				<form method="post">
+					<h1>DONOR REGISTER</h1>
+					<br> 
+					<div class="form-row">
+						<input type="text" name="fn" class="form-control" placeholder="First Name">
+						<input type="text" name="ln" class="form-control" placeholder="Last Name">
+					</div>
+					<div class="form-row">
+						<input type="text" name="gen" class="form-control" placeholder="Gender">
+						
+						<select name="donor" id="" placeholder="Blood Group">
+						<option placeholder="">Select Blood Group</option>
+							{% for row in data['don']%}
+							<option placeholder="Blood Groups" value="{{row['group_id']}}">{{row['group_name']}}</option>
+							{% endfor%}
+						</select> 
+						
+       			</div>
+					<div class="form-row">
+						<input type="text" name="age" class="form-control" placeholder="Age">
+						<input type="text" name="pin" class="form-control" placeholder="Pincode">
+					</div>
+					<div class="form-row">
+						<input type="text" name="pn" class="form-control" placeholder="Phone">
+						<input type="text" name="mail" class="form-control" placeholder="Mail">
+					</div>
+					<div class="form-row">
+						<input type="text" name="username" class="form-control" placeholder="Username">
+						<input type="text" name="password" class="form-control" placeholder="Password">
+					</div>
+					<!-- <div class="form-row">
+						<input type="text" class="form-control" placeholder="Phone">
+						{ <div class="form-holder">
+							<select name="" id="" class="form-control">
+								<option value="" disabled selected>Choose Your Class</option>
+								<option value="class 01">Class 01</option>
+								<option value="class 02">Class 02</option>
+								<option value="class 03">Class 03</option>
+							</select>
+							<i class="zmdi zmdi-chevron-down"></i> 
+						</div> 
+					</div> -->
+					<button name='submit'>REGISTER
+						<i class="zmdi zmdi-long-arrow-right"></i>
+					</button>
+				</form>
+				
+			</div>
+		</div>
+
+		<script src="static/assets/orgreg/js/jquery-3.3.1.min.js"></script>
+		<script src="static/assets/orgreg/js/main.js"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Organization Register</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="/static/assets/orgreg/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="/static/assets/orgreg/css/style.css">
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+	</head>
+
+	<body ng-app="">
+
+		<div class="wrapper">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="/static/assets/orgreg/images/registration-form-6.jpg" alt="">
+				</div>
+				<form method="post" name="myform" novalidate>
+					<h1>ORGANIZATION REGISTER</h1>
+					<br> 
+					<div class="form-row">
+						<input type="text" name="name" ng-model="name" required class="form-control" placeholder="Name"><br>
+
+						<span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
+						<span ng-show="myForm.name.$error.required">name is required</span>
+						</span>
+
+						<input type="text" ng-model="place" required name="place" ng-model="place" required class="form-control" placeholder="Place">
+						<span style="color:red" ng-show="myForm.place.$dirty && myForm.place.$invalid">
+						<span ng-show="myForm.place.$error.required">Place is required</span>
+						</span>
+					</div>
+
+					<div class="form-row">
+						<input type="number" ng-model="pin" required name="pin" class="form-control" placeholder="Pincode">
+						<span style="color:red" ng-show="myForm.pin.$dirty && myForm.pin.$invalid">
+						<span ng-show="myForm.pin.$error.required">pincode is required</span>
+						</span>
+
+						<input type="number" name="phone" ng-model="phone" required class="form-control" placeholder="Phone">
+						<span style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+						<span ng-show="myForm.phone.$error.required">Phone is required</span>
+						</span>
+					</div>
+					<div class="form-row">
+						<input type="email" name="mail" ng-model="mail" required class="form-control" placeholder="Mail">
+						<span style="color:red" ng-show="myForm.mail.$dirty && myForm.mail.$invalid">
+						<span ng-show="myForm.mail.$error.required">email is required</span>
+						<span ng-show="myForm.mail.$error.mail">Invalid email address.</span>
+						</span>
+						<input type="text" name="lno" ng-model="lno" required class="form-control" placeholder="License number">
+						<span style="color:red" ng-show="myForm.lno.$dirty && myForm.lno.$invalid">
+						<span ng-show="myForm.lno.$error.required">License is required</span>
+						</span>
+					</div>
+					<div class="form-row">
+						<input type="text" name="username" ng-model="username" required class="form-control" placeholder="Username">
+						<span style="color:red" ng-show="myForm.username.$dirty && myForm.username.$invalid">
+						<span ng-show="myForm.username.$error.required">Username is required</span>
+						</span>
+						<input type="text" ng-model="password" required name="password" class="form-control" placeholder="Password">
+						<span style="color:red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+						<span ng-show="myForm.password.$error.required">Password is required</span>
+						</span>
+					</div>
+					<!-- <div class="form-row">
+						<input type="text" class="form-control" placeholder="Phone">
+						{ <div class="form-holder">
+							<select name="" id="" class="form-control">
+								<option value="" disabled selected>Choose Your Class</option>
+								<option value="class 01">Class 01</option>
+								<option value="class 02">Class 02</option>
+								<option value="class 03">Class 03</option>
+							</select>
+							<i class="zmdi zmdi-chevron-down"></i> 
+						</div> 
+					</div> -->
+					<input type="submit" class="_btn_04" name="submit" value="Register" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  myForm.email.$dirty && myForm.email.$invalid">
+				</form>
+				
+			</div>
+		</div>
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+    $scope.fname = '';
+    $scope.email = '';
+    $scope.place = '';
+    $scope.pin = '';
+    $scope.mail='';
+    $scope.lno='';
+});
+</script>
+		<script src="/static/assets/orgreg/js/jquery-3.3.1.min.js"></script>
+		<script src="/static/assets/orgreg/js/main.js"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

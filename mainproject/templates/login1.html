@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="/static/assets/login/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/assets/login/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/assets/login/css/style.css" rel="stylesheet">
+
+    <title>Educational Bootstrap 5 Login Page Website Tampalte</title>
+  </head>
+  <body>
+    <section class="form-02-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="_lk_de">
+              <div class="form-03-main">
+                <div class="logo">
+                  <img src="/static/assets/login/images/user.png">
+                </div>
+                <form method="post" ng-app="myApp" name="myForm" novalidate>
+                <div class="form-group">
+                  <input type="text" name="username" ng-model="username" required  class="form-control _ge_de_ol" type="text" placeholder="Enter Username" required="" aria-required="true">
+                </div>
+                <span style="color:red" ng-show="myForm.username.$dirty && myForm.username.$invalid">
+               <span ng-show="myForm.username.$error.required">Username is required</span>
+            </span>
+
+                <div class="form-group">
+                  <input type="password" name="password" ng-model="password" required class="form-control _ge_de_ol" type="text" placeholder="Enter Password" required="" aria-required="true">
+                </div>
+                 <span style="color:red" ng-show="myForm.username.$dirty && myForm.username.$invalid">
+               <span ng-show="myForm.username.$error.required">Password is required</span>
+            </span>
+
+               
+                <input type="submit" class="_btn_04" name="submit" value="Login" class="_btn_04" name="submit" value="Register" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  myForm.email.$dirty && myForm.email.$invalid">
+
+                
+                </form>
+
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
